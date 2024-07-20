@@ -1,12 +1,13 @@
-import type { Metadata } from "next";
-import { Open_Sans } from "next/font/google";
-import "./globals.css";
+import type { Metadata } from 'next';
+import { Open_Sans } from 'next/font/google';
+import './globals.css';
+import { ClerkProvider } from '@clerk/nextjs';
 
-const inter = Open_Sans({ subsets: ["latin"] });
+const inter = Open_Sans({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: "FinBuddy",
-  description: "Your Financial Partner",
+  title: 'FinBuddy',
+  description: 'Your Financial Partner',
 };
 
 export default function RootLayout({
@@ -16,7 +17,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <ClerkProvider
+          publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}
+        >
+          {children}
+        </ClerkProvider>
+      </body>
     </html>
   );
 }
