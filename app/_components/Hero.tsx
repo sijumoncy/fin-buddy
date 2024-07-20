@@ -12,7 +12,7 @@ function Hero() {
             <>
               <h1 className="text-2xl font-semibold text-black dark:text-white">
                 Get Rid Of Your Finance Headaches <br />
-                <span className="text-4xl md:text-[6rem] font-bold mt-1 leading-none">
+                <span className="text-4xl md:text-[6rem] font-bold mt-1 leading-none text-primary">
                   Your Personal Finance Partner
                 </span>
               </h1>

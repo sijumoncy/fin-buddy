@@ -23,7 +23,7 @@ function Header() {
           <Link href={'/dashboard'}>
             <Button variant={"outline"} className='rounded-full'>Dashboard</Button>
           </Link>
-          <Link href={'/dashboard'}>
+          <Link href={'/sign-in'}>
             <Button className='rounded-full'>Get Started</Button>
           </Link>
         </div>
